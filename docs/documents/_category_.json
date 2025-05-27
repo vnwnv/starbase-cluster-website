@@ -1,0 +1,8 @@
+{
+  "label": "Documents",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Config documents of starbase-cluster-k8s"
+  }
+}
