@@ -60,7 +60,7 @@ You also need uncomment `ansible_ssh_extra_args` and edit `ansible_ssh_private_k
 
 ### Build Cluster
 
-Go to the `bootstrap` directory and copy the `inventory.gen` to here, and named it to `inventory`. Copy the files in tools_playbook to here.
+Go to the `bootstrap` directory and copy the `inventory.gen` to here, and named it to `inventory`. Copy the files in `tools_playbook` to here.
 
 ```bash
 cp ../infra/inventory.gen ./inventory
