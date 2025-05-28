@@ -129,7 +129,7 @@ The project supports customizing the number and configurations of various node t
 ## Node Initialization
 
 Node initialization uses cloud-init primarily because it integrates easily with ProxmoxVE and reduces code complexity. Support for Combustion and Ignition is open for discussion—PRs are welcome. Cloud-init configurations are rendered by Terraform.
-d
+
 The openSUSE MicroOS image is designed to automatically expand partitions, so cloud-init's `growpart` and `resizefs` modules must be disabled. As a result, you may see cloud-init errors during the first boot—this is normal behavior. These modules are disabled via an initialization script temporarily stored at `/var/lib/cloud/scripts/per-instance/initialize.sh`. Each node executes this script once during initialization before deleting it.
 
 Packages specified in the configuration are installed by cloud-init at this stage. Network settings are also configured by cloud-init using configurations rendered by Terraform.
