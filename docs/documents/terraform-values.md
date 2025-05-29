@@ -4,7 +4,19 @@ sidebar_position: 1
 
 # Terraform Variables
 
-## Cloud-init Configuration
+:::tip Resoueces
+
+The example config file with full comments is available [here](https://github.com/vnwnv/starbase-cluster-k8s/blob/main/infra/vars/tfvars.example).
+
+:::
+
+:::danger Take care
+
+When you override a config field in a structure, you must provide the others! Otherwise, the not provided field will be deleted. You can copy the example file and modify it.
+
+:::
+
+## Common Cloud-init Configuration
 
 | Variable                                                  | Default                                                                  | Type         | Description                                                                                                                 |
 | --------------------------------------------------------- | ------------------------------------------------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
@@ -67,7 +79,13 @@ The other config variables are same as controlplane nodes.
 
 ## VM Hardware Configurations
 
-You can follow the [bpg/proxmox documents](https://registry.terraform.io/providers/bpg/proxmox/latest/docs/resources/virtual_environment_vm) to configure the hardware settings for your VMs. For now, the project only provide some enssential config parameters. If you need more configurations, please open an issue or create a PR.
+:::tip Resoueces
+
+You can follow the [bpg/proxmox documents](https://registry.terraform.io/providers/bpg/proxmox/latest/docs/resources/virtual_environment_vm) to configure the hardware settings for your VMs.
+
+:::
+
+For now, the project only provide some enssential config parameters. If you need more configurations, please open an issue or create a PR.
 
 ### Control Plane Nodes
 

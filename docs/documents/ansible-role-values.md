@@ -4,9 +4,13 @@ sidebar_position: 2
 
 # Ansible Role Variables
 
-This document list all of the configurable variables in ansible
+This document list all of the configurable variables in ansible.
 
-Note: When you override a config field in a structure, you must provide the others! Otherwise, the not provided field will be deleted.
+:::danger Take care
+
+When you override a config field in a structure, you must provide the others! Otherwise, the not provided field will be deleted.
+
+:::
 
 ## Default Variables (`defaults/main.yml`)
 
@@ -44,7 +48,7 @@ Note: When you override a config field in a structure, you must provide the othe
 | `rke2_config.node_labels`               | `null`                             | list    | List of the node labels to identify. These labels will apply to every node of cluster                                                                                                                                                                                |
 
 ### Add Server Switch
-
+warning
 | Variable         | Default | Type    | Description                                                                                                                          |
 | ---------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `add_additional` | `false` | boolean | To add addtional server to current cluster. Should be `false` if you are deploy at first time and you do not have a running cluster. |
@@ -60,7 +64,11 @@ Note: When you override a config field in a structure, you must provide the othe
 
 ## Variable Files (`vars/main.yml`)
 
-**Warning:** These variable designed not to manually modify. Otherwise, the ansible may run in to an error state.
+:::warning Take care
+
+These variable designed not to manually modify. Otherwise, the ansible may run in to an error state.
+
+:::
 
 ### Common Configuration
 
