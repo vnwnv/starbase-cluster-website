@@ -12,31 +12,31 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/IaC.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Starbase cluster k8s is a project followed IaC pattern, focus on easy deploy RKE2 cluster in
+        selfhost environment.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Build on openSUSE MicroOS',
+    Svg: require('@site/static/img/upgrade.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Whole stack is based on openSUSE MicroOS, which has a lot of advantages, such as
+        atomic, automatic upgrade, and so on.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powered by Terraform and Ansible',
+    Svg: require('@site/static/img/tools.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Combine terraform and ansible to build a cluster, Quick deploy and bootstrap.
+        And fullly decoupled into two stages.
       </>
     ),
   },

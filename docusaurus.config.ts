@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Starbase Cluster',
+  tagline: 'Deploy k8s for selfhost environment',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -68,7 +68,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Starbase',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -82,7 +82,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/vnwnv/starbase-cluster-k8s',
           label: 'GitHub',
           position: 'right',
         },
@@ -95,26 +95,22 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Guides',
+              to: '/docs/category/guides',
             },
+            {
+              label: 'Documents',
+              to: `/docs/category/documents`,
+            }
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+              label: 'Discussions',
+              href: 'https://github.com/vnwnv/starbase-cluster-k8s/discussions',
+            }
           ],
         },
         {
@@ -126,12 +122,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/vnwnv/starbase-cluster-k8s',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `The full project is licensed under the GNU Affero General Public License version 3 (AGPLv3).</br>Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
