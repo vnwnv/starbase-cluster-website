@@ -68,7 +68,11 @@ For example, if deploying 6 RKE2 server nodes, 3 RKE2 agent nodes, and 2 LoadBal
 | node02 | server02, server05, agent02, lb02 |
 | node03 | server03, server06, agent03       |
 
+:::tip Tip
+
 You can also select specific ProxmoxVE nodes to restrict VM deployment to those chosen nodes.
+
+:::
 
 ## Distribution Selection
 
@@ -89,7 +93,11 @@ In self-hosted environments, openSUSE MicroOS provides advantages over Talos or 
 - Compatibility with different Kubernetes distributions
 - Extensive package support via openSUSE OBS
 
+:::tip Resource
+
 For detailed information about openSUSE MicroOS, refer to the [official documentation](https://en.opensuse.org/Portal:MicroOS).
+
+:::
 
 ## Automatic Reboots and Reboot Windows
 
@@ -117,6 +125,12 @@ This generates eight reboot windows:
 - 18:45–19:40
 
 VMs of the same type will sequentially select their reboot windows from these time slots.
+
+:::tip Tip
+
+On RKE2 nodes, the reboot window of rebootmgr will still be set, but disabled auto reboot by default.
+
+:::
 
 ### kured
 
