@@ -126,10 +126,22 @@ For nodes using kured, openSUSE MicroOS creates a `/var/run/reboot-needed` file 
 
 The project supports customizing the number and configurations of various node types. Note: Nodes of the same type share identical VM configurations; different node types require separate definitions (see [example configuration file](https://github.com/vnwnv/starbase-cluster-k8s/blob/main/infra/vars/tfvars.example)).
 
-## Node Initialization
+### Node IDs  
+
+In ProxmoxVE, each node requires a unique ID. To allocate these IDs, the project allows defining a starting ID for each node type. Every node type must have a starting ID, and the IDs for VMs of that type will increment sequentially from this base value.  
+
+Ensure sufficient spacing is maintained between ID ranges to prevent conflicts.
+
+### Node Initialization
 
 Node initialization uses cloud-init primarily because it integrates easily with ProxmoxVE and reduces code complexity. Support for Combustion and Ignition is open for discussion—PRs are welcome. Cloud-init configurations are rendered by Terraform.
 
 The openSUSE MicroOS image is designed to automatically expand partitions, so cloud-init's `growpart` and `resizefs` modules must be disabled. As a result, you may see cloud-init errors during the first boot—this is normal behavior. These modules are disabled via an initialization script temporarily stored at `/var/lib/cloud/scripts/per-instance/initialize.sh`. Each node executes this script once during initialization before deleting it.
 
 Packages specified in the configuration are installed by cloud-init at this stage. Network settings are also configured by cloud-init using configurations rendered by Terraform.
+
+### IP Addresses  
+
+If the network where the virtual machines reside has a DHCP service, you can set the IP acquisition method to `dhcp` to automatically obtain an IP address.  
+
+If static addressing is required, the project allows configuring a starting IP for each node type. The IP addresses for nodes of that type will begin from this starting IP, with subsequent nodes incrementing sequentially. The IP address calculation is implemented using Terraform's `cidrhost()` function.
