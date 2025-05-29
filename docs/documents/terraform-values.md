@@ -85,7 +85,7 @@ You can follow the [bpg/proxmox documents](https://registry.terraform.io/provide
 
 :::
 
-For now, the project only provide some enssential config parameters. If you need more configurations, please open an issue or create a PR.
+For now, the project only provide some essential config parameters. If you need more configurations, please open an issue or create a PR.
 
 ### Control Plane Nodes
 
