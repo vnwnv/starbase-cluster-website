@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Build on openSUSE MicroOS',
+    title: 'Auto Atomic Upgrade',
     Svg: require('@site/static/img/upgrade.svg').default,
     description: (
       <>
@@ -31,12 +31,12 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by Terraform and Ansible',
+    title: 'Custom your cluster',
     Svg: require('@site/static/img/tools.svg').default,
     description: (
       <>
-        Combine terraform and ansible to build a cluster, Quick deploy and bootstrap.
-        And fullly decoupled into two stages.
+        Combine terraform and ansible to build a cluster.
+        Build your own cluster with your own configuration.
       </>
     ),
   },
