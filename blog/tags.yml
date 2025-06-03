@@ -17,3 +17,8 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+deploy:
+  label: Deploy
+  permalink: /deploy
+  description: Things about deploy
